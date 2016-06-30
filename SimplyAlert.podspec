@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/dalu93/SimplyAlert", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/dalu93/SimplyAlert.git", :tag => s.version.to_s }
 
   s.source_files  = "Source/*.swift"
 
