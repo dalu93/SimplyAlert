@@ -6,44 +6,49 @@ Swifty way to use `UIAlertController` and `UIAlertAction`
 
 Initialize `UIAlertAction` easily.
 
-    // Here I'm using the default text that is "Cancel". You can override it
-    // by calling `UIAlertAction.Cancel("My text") { print($0) }`
-    let cancelAction = UIAlertAction.Cancel { print($0) }
+```swift
+// Here I'm using the default text that is "Cancel". You can override it
+// by calling `UIAlertAction.Cancel("My text") { print($0) }`
+let cancelAction = UIAlertAction.Cancel { print($0) }
+```
 
 Initialize your `UIAlertController` extremely fast and add your action to it. Then present it
 
-    // Using the chain provided by `add(_:)` that returns 
-    // the same `UIAlertController` instance
-    let _ = UIAlertController.alertWith(
-        title: "My title",
-        message: "My message"
-    ).add(cancelAction)
-    .add(okayAction)
-    .add(logoutAction)
-    .presentIn(self) // self is the UIViewController instance
+```swift
+// Using the chain provided by `add(_:)` that returns 
+// the same `UIAlertController` instance
+let _ = UIAlertController.alertWith(
+    title: "My title",
+    message: "My message"
+).add(cancelAction)
+.add(okayAction)
+.add(logoutAction)
+.presentIn(self) // self is the UIViewController instance
+```
 
 This is exactly equivalent to
 
-    let cancelAction = UIAlertAction(
-        title: "Cancel",
-        style: .Cancel,
-        handler: { print($0) }
-    )
+```swift
+let cancelAction = UIAlertAction(
+    title: "Cancel",
+    style: .Cancel,
+    handler: { print($0) }
+)
 
-    let alert = UIAlertController(
-        title: "My title",
-        message: "My message",
-        preferredStyle: .Alert
-    )
+let alert = UIAlertController(
+    title: "My title",
+    message: "My message",
+    preferredStyle: .Alert
+)
 
-    alert.addAction(cancelAction)
+alert.addAction(cancelAction)
 
-    presentViewController(
-        alert,
-        animated: true,
-        completion: nil
-    )
-
+presentViewController(
+    alert,
+    animated: true,
+    completion: nil
+)
+```
 # Installation
 
 - **For iOS 8+ projects** with [CocoaPods](https://cocoapods.org):
