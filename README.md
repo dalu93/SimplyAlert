@@ -1,5 +1,9 @@
 # SimplyAlert
 
+[![Build Status](https://travis-ci.org/dalu93/SimplyAlert.svg?branch=master)](https://travis-ci.org/dalu93/SimplyAlert)
+[![Cocoapods version](https://cocoapod-badges.herokuapp.com/v/SimplyAlert/1.0/badge.png)](https://cocoapod-badges.herokuapp.com/v/SimplyAlert/1.0/badge.png)
+
+
 Swifty way to use `UIAlertController` and `UIAlertAction`
 
 # Example
