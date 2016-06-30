@@ -21,8 +21,6 @@ let _ = UIAlertController.alertWith(
     title: "My title",
     message: "My message"
 ).add(cancelAction)
-.add(okayAction)
-.add(logoutAction)
 .presentIn(self) // self is the UIViewController instance
 ```
 
